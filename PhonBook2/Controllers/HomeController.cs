@@ -29,35 +29,36 @@ namespace PhonBook2.Controllers
             return View();
         }
         [Authorize]
-        public ViewResult PersonDetails()
+        public ActionResult PersonDetails()
         {
             // Person dbObj = new Person();
             // dbObj.PersonId = ICollection. ;
-          /*  PhoneBookDbEntities1 db = new PhoneBookDbEntities1();
-            List<Person> list = db.People.ToList();
-            List<Person> viewlist = new List<Person>();
-            Person obj = new Person();
-            Person 
-            
-                s.PersonId = s.PersonId;
-                obj.FirstName = s.FirstName;
-                obj.MiddleName = s.MiddleName;
-                obj.LastName = s.LastName;
-                obj.HomeAddress = s.HomeAddress;
-                obj.HomeCity = s.HomeCity;
-                obj.LinkedInId = s.LinkedInId;
-                obj.TwitterId = s.TwitterId;
-                obj.FaceBookAccountId = s.FaceBookAccountId;
-                obj.EmailId = s.EmailId;
-                obj.AddedBy = s.AddedBy;
-                obj.AddedOn = DateTime.Now;
+            /*  PhoneBookDbEntities1 db = new PhoneBookDbEntities1();
+              List<Person> list = db.People.ToList();
+              List<Person> viewlist = new List<Person>();
+              Person obj = new Person();
+              Person 
+
+                  s.PersonId = s.PersonId;
+                  obj.FirstName = s.FirstName;
+                  obj.MiddleName = s.MiddleName;
+                  obj.LastName = s.LastName;
+                  obj.HomeAddress = s.HomeAddress;
+                  obj.HomeCity = s.HomeCity;
+                  obj.LinkedInId = s.LinkedInId;
+                  obj.TwitterId = s.TwitterId;
+                  obj.FaceBookAccountId = s.FaceBookAccountId;
+                  obj.EmailId = s.EmailId;
+                  obj.AddedBy = s.AddedBy;
+                  obj.AddedOn = DateTime.Now;
 
 
-            
-            db.People.Add(obj);
-            db.SaveChanges();*/
 
-            return View();
+              db.People.Add(obj);
+              db.SaveChanges();*/
+            var result = new ContactsController();
+            return result.contacts();
+            //return View();
         }
         [Authorize]
         public ViewResult add_contacts()
